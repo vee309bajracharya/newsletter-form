@@ -1,0 +1,14 @@
+/* custom font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.showError{
+    @apply text-error text-[15px] font-primary font-bold;
+}
+
+.btnPrimary{
+    @apply bg-primary text-white p-5 rounded-md w-full my-4 font-bold font-primary hover:bg-btnHover transition-all duration-300;
+}
