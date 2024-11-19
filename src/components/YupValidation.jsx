@@ -4,6 +4,6 @@ export const YupValidation =
 
     Yup.object({
         email: Yup.string()
-            .email()
-            .required('Valid email required')
+            .email('Enter a valid email address')
+            .required('Email is required')
     });
