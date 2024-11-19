@@ -3,7 +3,8 @@ import { useFormik } from "formik";
 import { YupValidation } from "./components/YupValidation";
 import Success from "./components/Success";
 import { useState } from "react";
-import signup1 from './assets/images/sign-up-desktop.svg'
+import signup1 from './assets/images/sign-up-desktop.svg';
+import signup2 from './assets/images/sign-up-mobile.svg';
 
 // defining custom function for initial value
 const initialValues = {
@@ -64,14 +65,14 @@ const App = () => {
   return (
     <section className="bg-backgroundColor w-full h-dvh flex justify-center items-center">
       {/* form container */}
-      <section className="bg-white rounded-2xl flex justify-between items-center">
+      <section className="bg-white rounded-2xl flex justify-between items-center flex-col-reverse lg:flex-row">
         {/* content left */}
-        <div className="w-1/2 pl-16">
+        <div className="xs:p-5 sm:p-8 lg:pl-16 w-full lg:w-1/2">
           {/* details */}
-          <h1 className="text-primary text-5xl font-bold tracking-wide">
+          <h1 className="text-primary font-bold xs:text-4xl lg:text-5xl">
             Stay updated!
           </h1>
-          <p className="text-xl my-5 font-primary">
+          <p className="my-7 font-primary xs:text-[15px] sm:text-[20px] text-charcoalGray">
             Join 60,000+ product managers receiving monthly updates on:
           </p>
 
@@ -83,7 +84,7 @@ const App = () => {
                   alt="success-icon"
                   className="inline-block h-4 mr-3"
                 />
-                <span className="font-primary">{info.text}</span>
+                <span className="font-primary xs:text-[13px] sm:text-[20px] text-charcoalGray">{info.text}</span>
               </p>
             </div>
           ))}
@@ -127,8 +128,13 @@ const App = () => {
         </div>
 
         {/* content right */}
-        <div className="pr-4 py-4">
+        <div className="xs:hidden lg:inline-flex pr-4 py-4">
           <img src={signup1} alt="signup-img" />
+        </div>
+
+        {/* mobile-img */}
+        <div className="lg:hidden w-full">
+            <img src={signup2} alt="signup-img" className="w-full xs:rounded-sm md:rounded-tl-2xl md:rounded-tr-2xl" />
         </div>
       </section>
     </section>

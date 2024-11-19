@@ -23,6 +23,9 @@ export default {
       },
       fontFamily:{
         primary: [ "Roboto", 'sans-serif']
+      },
+      screens:{
+        xs: '200px',
       }
   },
   plugins: [],

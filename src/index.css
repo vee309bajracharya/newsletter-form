@@ -6,9 +6,9 @@
 @tailwind utilities;
 
 .showError{
-    @apply text-error text-[15px] font-primary font-bold;
+    @apply text-error xs:text-[12px] md:text-[15px] font-primary font-bold;
 }
 
 .btnPrimary{
-    @apply bg-primary text-white p-5 rounded-md w-full my-4 font-bold font-primary hover:bg-btnHover transition-all duration-300;
+    @apply bg-primary text-white xs:p-5 xs:text-[13px] rounded-md w-full my-4 font-bold font-primary hover:bg-btnHover transition-all duration-300;
 }
